@@ -438,11 +438,6 @@ Transform:
   m_Father: {fileID: 1701221341}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 18.037, y: 0, z: 0}
---- !u!1 &998368886 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8723294160274685292, guid: 6dabf3fd8502c5445a2fd0c340ae4162, type: 3}
-  m_PrefabInstance: {fileID: 6208799034508533134}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1039891605
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,91 +643,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1270590823486129581, guid: 6dabf3fd8502c5445a2fd0c340ae4162, type: 3}
   m_PrefabInstance: {fileID: 6208799034508533134}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4642192901220288336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 998368886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 2cdcfa96be73cf44fa1288eed8df75ac, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4642192901220288339}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: Thrust
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 2ff0f477-2ecd-4ed3-89e2-c71c8d896005
-    m_ActionName: Keyboard/New action
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Keyboard
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!114 &4642192901220288339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 998368886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a09520b9ea2b734f8739a590125a5e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!54 &4642192901220288340
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 998368886}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!1001 &6208799034508533134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -785,10 +695,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2255342847591263857, guid: 6dabf3fd8502c5445a2fd0c340ae4162, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 508a5c5900b3d654ebf40cf88ed14dbf, type: 2}
     - target: {fileID: 8723294160274685292, guid: 6dabf3fd8502c5445a2fd0c340ae4162, type: 3}
       propertyPath: m_Name
       value: Player Ship
@@ -796,14 +702,5 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8723294160274685292, guid: 6dabf3fd8502c5445a2fd0c340ae4162, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4642192901220288336}
-    - targetCorrespondingSourceObject: {fileID: 8723294160274685292, guid: 6dabf3fd8502c5445a2fd0c340ae4162, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4642192901220288339}
-    - targetCorrespondingSourceObject: {fileID: 8723294160274685292, guid: 6dabf3fd8502c5445a2fd0c340ae4162, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4642192901220288340}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dabf3fd8502c5445a2fd0c340ae4162, type: 3}
