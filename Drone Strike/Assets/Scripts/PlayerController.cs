@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float controlPitchFactor = -15.0f;
     [SerializeField] float positionYawFactor = -.3f;
     [SerializeField] float controlRollFactor = -30.0f;
+    [SerializeField] float rotationFactor = 3.0f;
 
     float xThrow;
     float yThrow;
@@ -60,7 +61,8 @@ public class PlayerController : MonoBehaviour
 
         float rollDueToControl = xThrow * controlRollFactor;
         float roll = rollDueToControl;
-        transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+        Quaternion targetRotation = Quaternion.Euler(pitch, yaw, roll);
+        transform.localRotation = Quaternion.RotateTowards(transform.localRotation, targetRotation, rotationFactor);
 
     }
 }
