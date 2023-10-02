@@ -438,6 +438,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1239474453 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4988819616261375113, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+  m_PrefabInstance: {fileID: 5605244010445807748}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1394508889
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,11 +496,78 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1532947107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2759392865017741231, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+  m_PrefabInstance: {fileID: 5605244010445807748}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1552097158 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1840248608567849017, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+  m_PrefabInstance: {fileID: 5605244010445807748}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &1701221342 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2699608085028194809, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
   m_PrefabInstance: {fileID: 5605244010445807748}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4642192901220288336 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3082931897061517096, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+  m_PrefabInstance: {fileID: 5605244010445807748}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239474453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a09520b9ea2b734f8739a590125a5e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4642192901220288339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239474453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 2cdcfa96be73cf44fa1288eed8df75ac, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4642192901220288336}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: FiringLasers
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c7afd1e3-0d3f-40bd-a64a-11f90a3a855a
+    m_ActionName: Keyboard/Fire[/Keyboard/space]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Keyboard
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1001 &5605244010445807748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -548,6 +620,86 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1395543537161152365, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395543537161152365, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395543537161152365, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840248608567849017, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2759392865017741231, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3082931897061517096, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: firing.m_Id
+      value: 7a541700-b882-4a98-98fc-855cc7de314d
+      objectReference: {fileID: 0}
+    - target: {fileID: 3082931897061517096, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: firing.m_Name
+      value: Firing
+      objectReference: {fileID: 0}
+    - target: {fileID: 3082931897061517096, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: lasers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3082931897061517096, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: lasers.Array.data[0]
+      value: 
+      objectReference: {fileID: 1532947107}
+    - target: {fileID: 3082931897061517096, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: lasers.Array.data[1]
+      value: 
+      objectReference: {fileID: 1552097158}
+    - target: {fileID: 3082931897061517096, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: firing.m_SingletonActionBindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3082931897061517096, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: firing.m_SingletonActionBindings.Array.data[0].m_Id
+      value: 70f5a70f-009b-415d-bf60-ef9541598641
+      objectReference: {fileID: 0}
+    - target: {fileID: 3082931897061517096, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: firing.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Keyboard>/space
+      objectReference: {fileID: 0}
+    - target: {fileID: 3082931897061517096, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: firing.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Firing
+      objectReference: {fileID: 0}
+    - target: {fileID: 3215361333539367163, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3215361333539367163, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3215361333539367163, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3284970547903528008, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6880237071925335494, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: simulationSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969661569078893136, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9026922911420912275, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
       propertyPath: m_Name
       value: Player Rig
@@ -555,5 +707,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4988819616261375113, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4642192901220288339}
   m_SourcePrefab: {fileID: 100100000, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}

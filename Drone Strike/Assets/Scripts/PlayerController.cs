@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,9 +13,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float positionYawFactor = -.3f;
     [SerializeField] float controlRollFactor = -30.0f;
     [SerializeField] float rotationFactor = 3.0f;
-
+    [SerializeField] GameObject[] lasers;
+    [SerializeField] ParticleSystem[] particleSystemToDisable;
+    
     float xThrow;
     float yThrow;
+
+    ParticleSystem emission;
+    //private PlayerInput playerInput;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +30,14 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-
+        PlayerInput playerInput = GetComponent<PlayerInput>();
+        foreach (var p in particleSystemToDisable)
+        {
+            if (p != null)
+            {
+                p.Stop();
+            }
+        }
     }
 
 
@@ -63,6 +77,36 @@ public class PlayerController : MonoBehaviour
         float roll = rollDueToControl;
         Quaternion targetRotation = Quaternion.Euler(pitch, yaw, roll);
         transform.localRotation = Quaternion.RotateTowards(transform.localRotation, targetRotation, rotationFactor);
+    }
 
+    public void FiringLasers(InputAction.CallbackContext context)
+    {
+        if (context.started || context.performed)
+        {
+            Debug.Log("Fire");
+            EnableFire();
+        }
+        else
+            DisableFire();
+    }
+
+    public void EnableFire()
+    {
+        foreach (GameObject laser in lasers)
+        {
+            //laser.SetActive(true);
+            emission = laser.GetComponent<ParticleSystem>();
+            emission.Play();
+        }
+    }
+    public void DisableFire()
+    {
+        foreach (GameObject laser in lasers)
+        {
+            //laser.SetActive(false);
+            
+            emission = laser.GetComponent<ParticleSystem>();
+            emission.Stop();
+        }
     }
 }

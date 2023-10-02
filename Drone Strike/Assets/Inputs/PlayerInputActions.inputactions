@@ -3,12 +3,12 @@
     "maps": [
         {
             "name": "Keyboard",
-            "id": "31cc5c1c-fde1-472c-a686-0e138c6bb7e9",
+            "id": "1b99f17a-9df4-48ae-9c11-d2041acd75d5",
             "actions": [
                 {
-                    "name": "Thrust",
+                    "name": "Fire",
                     "type": "Button",
-                    "id": "2ff0f477-2ecd-4ed3-89e2-c71c8d896005",
+                    "id": "c7afd1e3-0d3f-40bd-a64a-11f90a3a855a",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -18,12 +18,12 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "fa2f777a-c468-4bf3-aa6b-80fde4bb0274",
+                    "id": "75db8833-9e7b-4996-852c-619576b5c736",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Thrust",
+                    "action": "Fire",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
