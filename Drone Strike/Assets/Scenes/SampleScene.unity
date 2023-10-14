@@ -501,9 +501,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2759392865017741231, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
   m_PrefabInstance: {fileID: 5605244010445807748}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &1532947110 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6880237071925335494, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+  m_PrefabInstance: {fileID: 5605244010445807748}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1552097158 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1840248608567849017, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+  m_PrefabInstance: {fileID: 5605244010445807748}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1552097161 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6969661569078893136, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
   m_PrefabInstance: {fileID: 5605244010445807748}
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &1701221342 stripped
@@ -660,6 +670,22 @@ PrefabInstance:
       propertyPath: lasers.Array.data[1]
       value: 
       objectReference: {fileID: 1552097158}
+    - target: {fileID: 3082931897061517096, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: particleSystemToDisable
+      value: 
+      objectReference: {fileID: 1552097161}
+    - target: {fileID: 3082931897061517096, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: particleSystemToDisable.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3082931897061517096, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: particleSystemToDisable.Array.data[0]
+      value: 
+      objectReference: {fileID: 1532947110}
+    - target: {fileID: 3082931897061517096, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: particleSystemToDisable.Array.data[1]
+      value: 
+      objectReference: {fileID: 1552097161}
     - target: {fileID: 3082931897061517096, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
       propertyPath: firing.m_SingletonActionBindings.Array.size
       value: 1

@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
         transform.localPosition = new Vector3(clamped_X_Pos, clamped_Y_Pos, transform.localPosition.z);
     }
 
-    public void ProcessRotation()
+    public void ProcessRotation() //rotation of ship
     {
         float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
         float pitchDueToControl = yThrow * controlPitchFactor;
@@ -79,34 +79,27 @@ public class PlayerController : MonoBehaviour
         transform.localRotation = Quaternion.RotateTowards(transform.localRotation, targetRotation, rotationFactor);
     }
 
-    public void FiringLasers(InputAction.CallbackContext context)
+    public void FiringLasers(InputAction.CallbackContext context) //process of bullets firing
     {
         if (context.started || context.performed)
         {
             Debug.Log("Fire");
-            EnableFire();
+            SetActiveFire(true);
         }
         else
-            DisableFire();
+            SetActiveFire(false);
     }
 
-    public void EnableFire()
+    public void SetActiveFire(bool isActive)
     {
         foreach (GameObject laser in lasers)
         {
+            emission = laser.GetComponent<ParticleSystem>();
             //laser.SetActive(true);
-            emission = laser.GetComponent<ParticleSystem>();
-            emission.Play();
-        }
-    }
-    public void DisableFire()
-    {
-        foreach (GameObject laser in lasers)
-        {
-            //laser.SetActive(false);
-            
-            emission = laser.GetComponent<ParticleSystem>();
-            emission.Stop();
+            if (isActive)
+                emission.Play();
+            else
+                emission.Stop();
         }
     }
 }
