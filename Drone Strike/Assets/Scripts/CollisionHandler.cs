@@ -18,7 +18,7 @@ public class CollisionHandler : MonoBehaviour
     {
         Debug.Log($"{name} triggered with {collision.gameObject.name}");
         DisableMovement();
-        Invoke(nameof(ReloadCurrentScene), 1);
+        Invoke(nameof(ReloadCurrentScene), 1f);
     }
 
     private bool DestroyPlayer()
