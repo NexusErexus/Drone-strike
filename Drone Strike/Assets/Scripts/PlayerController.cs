@@ -5,22 +5,33 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [Tooltip("Flying speed of the ship")]
     [SerializeField] float speedFactor = 18.0f;
-    float xRange = 10f;
-    float yRange = 8f;
+
+    [Header("Speed of rotation the ship by XYZ axis")]
     [SerializeField] float positionPitchFactor = -2.0f;
-    [SerializeField] float controlPitchFactor = -15.0f;
     [SerializeField] float positionYawFactor = -.3f;
+    [SerializeField] float controlPitchFactor = -15.0f;
     [SerializeField] float controlRollFactor = -30.0f;
     [SerializeField] float rotationFactor = 3.0f;
+
+    [Tooltip("Laser particles contains here")]
     [SerializeField] GameObject[] lasers;
-    [SerializeField] ParticleSystem[] particleSystemToDisable;
     
+    [Tooltip("Disabling laser projectiles by the Awake() method")]
+    [SerializeField] ParticleSystem[] particleSystemToDisable;
+
+
+    [Tooltip("How far player moves the ship by X axis")] 
+    [SerializeField] float xRange = 10f;
+
+    [Tooltip("How far player moves the ship by Y axis")] 
+    [SerializeField] float yRange = 8f;
+
     float xThrow;
     float yThrow;
 
     ParticleSystem emission;
-    //private PlayerInput playerInput;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +41,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        PlayerInput playerInput = GetComponent<PlayerInput>();
+        var playerInput = GetComponent<PlayerInput>();
         foreach (var p in particleSystemToDisable)
         {
             if (p != null)
@@ -95,7 +106,6 @@ public class PlayerController : MonoBehaviour
         foreach (GameObject laser in lasers)
         {
             emission = laser.GetComponent<ParticleSystem>();
-            //laser.SetActive(true);
             if (isActive)
                 emission.Play();
             else

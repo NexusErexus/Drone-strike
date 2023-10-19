@@ -718,6 +718,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4988819616261375113, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 6880237071925335494, guid: 471fb28b2dfbc584896590ee58c17728, type: 3}
       propertyPath: simulationSpeed
       value: 1
