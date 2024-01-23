@@ -6,9 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
+    [SerializeField] ParticleSystem death_explosion;
+    [SerializeField] MeshRenderer player_ship_mesh;
+    private void Awake()
+    {
+        death_explosion.Stop();
+        player_ship_mesh.enabled = true;
+    }
     private void Start()
     {
-
+        //playership_death_explosion.Stop();
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -17,7 +24,9 @@ public class CollisionHandler : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         Debug.Log($"{name} triggered with {collision.gameObject.name}");
+        StartCrushSequence();
         DisableMovement();
+        
         Invoke(nameof(ReloadCurrentScene), 1f);
     }
 
@@ -35,6 +44,11 @@ public class CollisionHandler : MonoBehaviour
         GetComponent<PlayerController>().enabled = false;
     }
 
+    private void StartCrushSequence()
+    {
+        death_explosion.Play();
+        player_ship_mesh.enabled = false;
+    }
 
     private void ReloadCurrentScene()
     {
