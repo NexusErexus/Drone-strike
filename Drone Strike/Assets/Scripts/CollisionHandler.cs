@@ -19,11 +19,11 @@ public class CollisionHandler : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log($"{name} collided with {collision.gameObject.name}");
+        //Debug.Log($"{name} collided with {collision.gameObject.name}");
     }
     private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log($"{name} triggered with {collision.gameObject.name}");
+        //Debug.Log($"{name} triggered with {collision.gameObject.name}");
         StartCrushSequence();
         DisableMovement();
         

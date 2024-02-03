@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.started || context.performed)
         {
-            Debug.Log("Fire");
+            //Debug.Log("Fire");
             SetActiveFire(true);
         }
         else
