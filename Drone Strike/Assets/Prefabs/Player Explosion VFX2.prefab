@@ -9794,7 +9794,7 @@ GameObject:
   - component: {fileID: 5882889457318424948}
   - component: {fileID: 6456609463224760755}
   m_Layer: 0
-  m_Name: Explosion VFX2
+  m_Name: Player Explosion VFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

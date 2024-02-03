@@ -48,6 +48,7 @@ public class CollisionHandler : MonoBehaviour
     {
         death_explosion.Play();
         player_ship_mesh.enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
     }
 
     private void ReloadCurrentScene()
