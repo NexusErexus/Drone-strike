@@ -7,11 +7,13 @@ public class EnemyDestroyer : MonoBehaviour
 {
     [SerializeField] GameObject deathVFX;
     [SerializeField] GameObject enemyHitVFX;
-    [SerializeField] Transform parent;
+    
+
     [SerializeField] int amountToHit = 10;
 
     ScoreBoard scoreBoard;
     EnemyHealth enemyhealth;
+    GameObject parentGameObject;
 
     bool isEnemyDead;
 
@@ -19,6 +21,8 @@ public class EnemyDestroyer : MonoBehaviour
     {
         scoreBoard = FindObjectOfType<ScoreBoard>();
         enemyhealth = GetComponent<EnemyHealth>();
+        parentGameObject = GameObject.FindWithTag("SpawnAtRuntime");
+
     }
     private void OnParticleCollision(GameObject other)
     {
@@ -31,7 +35,8 @@ public class EnemyDestroyer : MonoBehaviour
     public void KillEnemy()
     {
         GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity);
-        vfx.transform.parent = parent;
+        //vfx.transform.parent = parentGameObject.transform;
+        vfx.transform.SetParent(parentGameObject.transform);
         Destroy(gameObject);
     }
     public void ProcessHit()
@@ -43,7 +48,8 @@ public class EnemyDestroyer : MonoBehaviour
     {
         isEnemyDead = enemyhealth.DecreaseHealth(damage);
         GameObject hitVFX = Instantiate(enemyHitVFX, transform.position, Quaternion.identity);
-        hitVFX.transform.parent = parent;
+        //hitVFX.transform.parent = parentGameObject.transform;
+        hitVFX.transform.SetParent(parentGameObject.transform);
         return isEnemyDead;
     }
 }

@@ -2672,8 +2672,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
   enemyHitVFX: {fileID: 6315476936134296339, guid: 28ef75451c320df4099560d9105a4214, type: 3}
-  parent: {fileID: 0}
   amountToHit: 10
+  spawnAtRuntime: {fileID: 0}
 --- !u!1 &9000938302941769228
 GameObject:
   m_ObjectHideFlags: 0
