@@ -6,17 +6,14 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField] GameObject easyEnemy;
-    [SerializeField] GameObject hardEnemy;
+    //[SerializeField] GameObject healthEnemy;
 
-    [SerializeField] int easyEnemyHealth = 50;
-    [SerializeField] int hardEnemyHealth = 100;
+    [SerializeField] int enemyHealth = 50;
 
     public bool DecreaseHealth(int damage)
     {
-        easyEnemyHealth -= damage;
-        hardEnemyHealth -= damage;
-        if (hardEnemyHealth <= 0 || easyEnemyHealth <= 0)
+        enemyHealth -= damage;
+        if (enemyHealth <= 0)
         {
             return true;
         }
