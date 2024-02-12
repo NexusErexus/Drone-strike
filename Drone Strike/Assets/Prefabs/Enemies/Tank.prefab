@@ -2657,7 +2657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e40f1c72b152a7f40993de6645149991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 50
+  enemyHealth: 120
 --- !u!114 &7752904942199781729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2673,7 +2673,6 @@ MonoBehaviour:
   deathVFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
   enemyHitVFX: {fileID: 6315476936134296339, guid: 28ef75451c320df4099560d9105a4214, type: 3}
   amountToHit: 10
-  spawnAtRuntime: {fileID: 0}
 --- !u!1 &9000938302941769228
 GameObject:
   m_ObjectHideFlags: 0
