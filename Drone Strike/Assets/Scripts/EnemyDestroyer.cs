@@ -29,20 +29,21 @@ public class EnemyDestroyer : MonoBehaviour
         DoDamage(amountToHit);
         if (isEnemyDead)
             KillEnemy();
-        ProcessHit();
+        //ProcessHit();
     }
 
     public void KillEnemy()
     {
+        scoreBoard.IncreaseScore(amountToHit);
         GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity);
         //vfx.transform.parent = parentGameObject.transform;
         vfx.transform.SetParent(parentGameObject.transform);
         Destroy(gameObject);
     }
-    public void ProcessHit()
+    /*public void ProcessHit()
     {
         scoreBoard.IncreaseScore(amountToHit);
-    }
+    }*/
 
     public bool DoDamage(int damage)
     {
