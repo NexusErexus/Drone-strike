@@ -2560,6 +2560,7 @@ GameObject:
   - component: {fileID: 8663372528395822700}
   - component: {fileID: 3207217676464091323}
   - component: {fileID: 7752904942199781729}
+  - component: {fileID: -388578544511800645}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Untagged
@@ -2670,9 +2671,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ce31d971e0fe346994e33b67d92691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathVFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
+  deathFX: {fileID: 3200836327345539238, guid: d2c744d78799a47488ef7b2f880fbb22, type: 3}
   enemyHitVFX: {fileID: 6315476936134296339, guid: 28ef75451c320df4099560d9105a4214, type: 3}
   amountToHit: 10
+--- !u!65 &-388578544511800645
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8927170431836602392}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 12.222861, y: 1.8087654, z: 10.83564}
+  m_Center: {x: 0, y: -0.0000006854534, z: -0.00000047683716}
 --- !u!1 &9000938302941769228
 GameObject:
   m_ObjectHideFlags: 0
