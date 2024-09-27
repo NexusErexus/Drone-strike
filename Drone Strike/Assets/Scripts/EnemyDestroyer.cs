@@ -39,6 +39,7 @@ public class EnemyDestroyer : MonoBehaviour
         //vfx.transform.parent = parentGameObject.transform;
         fx.transform.SetParent(parentGameObject.transform);
         Destroy(gameObject);
+        
     }
     /*public void ProcessHit()
     {

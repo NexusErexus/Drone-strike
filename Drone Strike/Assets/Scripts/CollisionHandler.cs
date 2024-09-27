@@ -8,9 +8,11 @@ public class CollisionHandler : MonoBehaviour
 {
     [SerializeField] ParticleSystem death_explosion;
     [SerializeField] MeshRenderer player_ship_mesh;
+    [SerializeField] AudioSource death_sfx;
     private void Awake()
     {
         death_explosion.Stop();
+        death_sfx.Stop();
         player_ship_mesh.enabled = true;
     }
     private void Start()
@@ -27,7 +29,7 @@ public class CollisionHandler : MonoBehaviour
         StartCrushSequence();
         DisableMovement();
         
-        Invoke(nameof(ReloadCurrentScene), 1f);
+        Invoke(nameof(ReloadCurrentScene), 2f);
     }
 
     private bool DestroyPlayer()
@@ -47,6 +49,7 @@ public class CollisionHandler : MonoBehaviour
     private void StartCrushSequence()
     {
         death_explosion.Play();
+        death_sfx.Play();
         player_ship_mesh.enabled = false;
         GetComponent<BoxCollider>().enabled = false;
     }

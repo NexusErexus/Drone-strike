@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float controlPitchFactor = -15.0f;
     [SerializeField] float controlRollFactor = -30.0f;
     [SerializeField] float rotationFactor = 3.0f;
+
+    [SerializeField] AudioSource leftShoot;
 
     [Tooltip("Laser particles contains here")]
     [SerializeField] GameObject[] lasers;
@@ -33,10 +36,12 @@ public class PlayerController : MonoBehaviour
 
     ParticleSystem emission;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     private void Awake()
@@ -49,6 +54,7 @@ public class PlayerController : MonoBehaviour
                 p.Stop();
             }
         }
+        leftShoot.Stop();
     }
 
 
@@ -57,6 +63,15 @@ public class PlayerController : MonoBehaviour
     {
         ProcessTranslation();
         ProcessRotation();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            leftShoot.Play();
+        }
+        else if (Input.GetKeyUp(KeyCode.Space))
+        {
+            leftShoot.Stop();
+        }
+
     }
 
     public void ProcessTranslation()
@@ -94,7 +109,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.started || context.performed)
         {
-            //Debug.Log("Fire");
+            Debug.Log("Fire");
             SetActiveFire(true);
         }
         else
@@ -107,7 +122,9 @@ public class PlayerController : MonoBehaviour
         {
             emission = laser.GetComponent<ParticleSystem>();
             if (isActive)
+            {
                 emission.Play();
+            }
             else
                 emission.Stop();
         }
